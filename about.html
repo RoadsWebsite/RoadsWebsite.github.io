@@ -2,19 +2,12 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="/favicon.png" />
 <title>Road Recyclers - About</title>
+<link rel="stylesheet" type="text/css" href="homestyle.css">
+<link rel="shortcut icon" href="/favicon.png"/>
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-* {box-sizing: border-box;}
-
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/truck.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/truck.webp");
   height: 50%;
   padding-right: 5%;
   background-position: center;
@@ -33,43 +26,6 @@ body, html {
   width: 100vw;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.header {
-  overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 20px 10px;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.header a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
-}
-
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-  padding-right: 100px;
-}
-
-.header a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
 }
 
 .h1 a {
@@ -132,8 +88,19 @@ body, html {
   <div class="header-right">
     <a href="/index.html">Home</a>
     <a class="active" href="/about.html">About</a>
-    <a href="/products.html">Products</a>
     <a href="/contact.html">Contact</a>
+    <div class="dropdown">
+      <button onclick="window.location.href='/products.html';" class="dropbtn">Products</button>
+      <div class="dropdown-content">
+        <a href="/products.html">ProRAP for Stockpiling</a>
+        <br>
+        <a href="/products.html#2">ProRAP for Cold In Place Recycling</a>
+        <br>
+        <a href="#">ProFlex for Full Depth Reclamation</a>
+        <br>
+        <a href="#">ProFLEX for Pug Milled Base</a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -172,7 +139,7 @@ body, html {
 
 <div class="footer">
   <p style="display:inline; padding-right:100px">1-817-733-4563</p>
-  <a style="color:white; text-decoration:none; display:inline;" href="mailto:admin@thetrr.com" data-type="mail">admin@thetrr.com</a>
+  <a style="color:white; text-decoration:none; display:inline;" href="mailto:info@roadrecyclers.com" data-type="mail">info@roadrecyclers.com</a>
 </div>
 
 </body>
