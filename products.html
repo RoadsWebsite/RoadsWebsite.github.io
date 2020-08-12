@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="/favicon.png" />
+<link rel="shortcut icon" href="/favicon.png"/>
 <title>Road Recyclers - Products</title>
 <style>
 body, html {
@@ -15,7 +15,7 @@ body, html {
 * {box-sizing: border-box;}
 
 .header {
-  overflow: hidden;
+  overflow: visible;
   background-color: #f1f1f1;
   padding: 20px 10px;
   position: -webkit-sticky; /* Safari */
@@ -38,7 +38,7 @@ body, html {
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
-  padding-right: 100px;
+  padding-right: 25px;
 }
 
 .header a:hover {
@@ -97,7 +97,6 @@ body, html {
   width: 50%;
   height: 20%;
   padding: 10px;
-  height: 600px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -113,6 +112,56 @@ body, html {
     width: 100%;
     height: auto;
   }
+}
+
+.dropbtn {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+@media screen and (min-width: 650px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+    color: black;
+  }
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
 }
 
 </style>
@@ -147,13 +196,24 @@ function showDivs(n, no) {
   <div class="header-right">
     <a href="/index.html">Home</a>
     <a href="/about.html">About</a>
-    <a class="active" href="/products.html">Products</a>
     <a href="/contact.html">Contact</a>
+    <div class="dropdown">
+      <button style="background-color: dodgerblue; color: white;" onclick="window.location.href='/products.html';" class="dropbtn">Products</button>
+      <div class="dropdown-content">
+        <a href="/products.html">ProRAP for Stockpiling</a>
+        <br>
+        <a href="/products.html#2">ProRAP for Cold In Place Recycling</a>
+        <br>
+        <a href="#">ProFlex for Full Depth Reclamation</a>
+        <br>
+        <a href="#">ProFLEX for Pug Milled Base</a>
+      </div>
+    </div>
   </div>
 </div>
 
 <div style="padding-left:.5%; padding-right:.5%;">
-<h1>ProRAP for stockpiling</h1>
+<h1 id="1">ProRAP for stockpiling</h1>
 <p style="font-size:125%;">Road Recyclers’ <b>ProRAP</b> technology was developed to meet the needs of agencies that needed an environmentally sound, cost effective recycled asphalt paving material.</p>
 </div>
 
@@ -177,22 +237,26 @@ function showDivs(n, no) {
   <div class="column" style="background-color:#E6E6E6;">
     <h1>ProRAP Job Examples:</h1>
     <div class="w3-content w3-display-container">
-      
-      <img class="mySlides1" src="/pile.png" width="421" height="224" style="width:100%; height:406px; object-fit: contain;">
-      
-      <img class="mySlides1" src="/prorap_falls.png" width="470" height="347" style="width:100%; height:406px; object-fit: contain; display: none">
-      
-      <img class="mySlides1" src="/CIR_image.png" width="470" height="347" style="width:100%; height:406px; object-fit: contain; display: none">
-      
+      <div class="mySlides1">
+        <img src="/pile.webp" width="421" height="224" style="width:100%; height:406px; object-fit: contain;">
+        <p style="font-size:125%;">Caption 1</p>
+      </div>
+      <div class="mySlides1" style="display: none">
+        <img src="/prorap_falls.webp" width="470" height="347" style="width:100%; height:406px; object-fit: contain;">
+        <p style="font-size:125%;">Caption 2</p>
+      </div>
+      <div class="mySlides1" style="display: none">
+        <img src="/CIR_image.webp" width="470" height="347" style="width:100%; height:406px; object-fit: contain;">
+        <p style="font-size:125%;">Caption 3</p>
+      </div>
       <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
       <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
     </div>
-    <p style="font-size:125%;">Caption 1</p>
   </div>
 </div>
 
 <div style="padding-left:.5%; padding-right:.5%;padding-top:2.5%;">
-<h1>ProRAP for Cold In Place Recycling</h1>
+<h1 id="2">ProRAP for Cold In Place Recycling</h1>
 <p style="font-size:125%;">Road Recyclers’ <b>Cold In-Place Recycling</b> (CIR) technology uses specially formulated, polymer-modified emulsions and specific mix design methodology to improve upon traditional CIR methods.</p>
 </div>
 
@@ -215,17 +279,21 @@ function showDivs(n, no) {
   <div class="column" style="background-color:#E6E6E6;">
     <h1>CIR Job Examples:</h1>
     <div class="w3-content w3-display-container">
-
-      <img class="mySlides2" src="/pile.png" width="421" height="224" style="width:100%; height:406px; object-fit: contain; display: none">
-
-      <img class="mySlides2" src="/prorap_falls.png" width="470" height="347" style="width:100%; height:406px; object-fit: contain;">
-
-      <img class="mySlides2" src="/CIR_image.png" width="470" height="347" style="width:100%; height:406px; object-fit: contain; display: none">
-
+      <div class="mySlides2">
+        <img src="/pile.webp" width="421" height="224" style="width:100%; height:406px; object-fit: contain;">
+        <p style="font-size:125%;">Caption 1</p>
+      </div>
+      <div class="mySlides2" style="display: none">
+        <img src="/prorap_falls.webp" width="470" height="347" style="width:100%; height:406px; object-fit: contain;">
+        <p style="font-size:125%;">Caption 2</p>
+      </div>
+      <div class="mySlides2" style="display: none">
+        <img src="/CIR_image.webp" width="470" height="347" style="width:100%; height:406px; object-fit: contain;">
+        <p style="font-size:125%;">Caption 3</p>
+      </div>
       <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1)">&#10094;</button>
       <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 1)">&#10095;</button>
     </div>
-    <p style="font-size:125%;">Caption 2</p>
   </div>
 </div>
 
@@ -234,7 +302,7 @@ function showDivs(n, no) {
 
 <div class="footer">
   <p style="display:inline; padding-right:100px">1-817-733-4563</p>
-  <a style="color:white; text-decoration:none; display:inline;" href="mailto:admin@thetrr.com" data-type="mail">admin@thetrr.com</a>
+  <a style="color:white; text-decoration:none; display:inline;" href="mailto:info@roadrecyclers.com" data-type="mail">info@roadrecyclers.com</a>
 </div>
 
 </body>
